@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VETFLOW.RU: Правовая позиция и Стратегия</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .legal-card {
+            transition: all 0.3s ease;
+        }
+        .legal-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-primary-200 selection:text-primary-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <!-- Logo -->
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary-600">
+                        <rect width="40" height="40" rx="12" fill="currentColor" fill-opacity="0.1"/>
+                        <path d="M12 14L18 28L28 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="28" cy="12" r="3" fill="currentColor"/>
+                    </svg>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">VETFLOW<span class="text-primary-600">.LEGAL</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#facts" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">Факты</a>
+                    <a href="#legislation" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">Законы</a>
+                    <a href="#analytics" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">Аналитика</a>
+                    <a href="#plan" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors">План</a>
+                    <a href="#letter" class="bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/30">Претензия</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider mb-6">
+                    <i data-lucide="alert-octagon" class="w-4 h-4"></i>
+                    Критическая ситуация
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold leading-tight mb-6 text-slate-900">
+                    Защита фирменного наименования <span class="gradient-text">ООО "ВЕТФЛОУ"</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                    Доменное имя <span class="font-mono font-bold bg-slate-200 px-1 rounded">vetflow.ru</span> было зарегистрировано третьим лицом спустя 19 часов после регистрации юридического лица. 
+                    Это классический случай киберсквоттинга (обратного захвата).
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-slate-100 flex-1">
+                        <div class="text-sm text-slate-500 mb-1">Стратегия</div>
+                        <div class="font-bold text-primary-700 text-lg">Судебный иск</div>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-slate-100 flex-1">
+                        <div class="text-sm text-slate-500 mb-1">Вероятность успеха</div>
+                        <div class="font-bold text-green-600 text-lg">90-95%</div>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm border border-slate-100 flex-1">
+                        <div class="text-sm text-slate-500 mb-1">Рекомендация</div>
+                        <div class="font-bold text-red-600 text-lg">НЕ выкупать</div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute inset-0 bg-primary-200 blur-3xl opacity-30 rounded-full"></div>
+                <div class="relative bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
+                    <h3 class="font-bold text-lg mb-6 flex items-center gap-2">
+                        <i data-lucide="clock" class="text-primary-600"></i>
+                        Хронология "Синхронизма"
+                    </h3>
+                    <div class="space-y-8 relative before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-200">
+                        <!-- Item 1 -->
+                        <div class="relative pl-10">
+                            <div class="absolute left-3 top-1.5 w-4 h-4 rounded-full bg-green-500 border-4 border-white shadow"></div>
+                            <div class="text-sm font-semibold text-slate-400">16.01.2026</div>
+                            <div class="font-bold text-slate-900">Регистрация ООО "ВЕТФЛОУ"</div>
+                            <div class="text-sm text-slate-500 mt-1">Внесение записи в ЕГРЮЛ (ОГРН 1269600000779)</div>
+                        </div>
+                        
+                        <!-- Gap info -->
+                        <div class="relative pl-10 py-2">
+                            <span class="inline-block bg-red-50 text-red-600 text-xs font-bold px-2 py-1 rounded border border-red-100">
+                                Разрыв < 24 часов
+                            </span>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="relative pl-10">
+                            <div class="absolute left-3 top-1.5 w-4 h-4 rounded-full bg-red-500 border-4 border-white shadow"></div>
+                            <div class="text-sm font-semibold text-slate-400">17.01.2026 (00:58 UTC)</div>
+                            <div class="font-bold text-slate-900">Захват домена vetflow.ru</div>
+                            <div class="text-sm text-slate-500 mt-1">Регистратор: Private Person. Цена: 100,000 RUB.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legislation Section -->
+    <section id="legislation" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Правовой фундамент</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Дело строится на совокупности трех мощных правовых норм. Ссылки ведут на актуальные редакции законов в СПС КонсультантПлюс.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="legal-card bg-slate-50 rounded-xl p-6 border border-slate-200">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 mb-4">
+                        <i data-lucide="shield" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Ст. 1474 ГК РФ</h3>
+                    <p class="text-xs font-semibold text-primary-600 uppercase tracking-wide mb-3">Основное основание</p>
+                    <p class="text-sm text-slate-600 mb-4">
+                        Запрещает использование тождественного фирменного наименования в интернете, если это может ввести в заблуждение.
+                    </p>
+                    <a href="https://www.consultant.ru/document/cons_doc_LAW_64629/27447c2332924195156673895781600072b25458/" target="_blank" class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-800">
+                        Читать статью <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="legal-card bg-slate-50 rounded-xl p-6 border border-slate-200">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 mb-4">
+                        <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Ст. 14.6 ФЗ "О защите конкуренции"</h3>
+                    <p class="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-3">Недобросовестная конкуренция</p>
+                    <p class="text-sm text-slate-600 mb-4">
+                        Прямо признает регистрацию доменного имени, тождественного чужому средству индивидуализации, актом недобросовестной конкуренции.
+                    </p>
+                    <a href="https://www.consultant.ru/document/cons_doc_LAW_61763/f326354897f1f00889988b02131560932590740a/" target="_blank" class="inline-flex items-center text-sm font-medium text-orange-600 hover:text-orange-800">
+                        Читать статью <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="legal-card bg-slate-50 rounded-xl p-6 border border-slate-200">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
+                        <i data-lucide="scale" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Ст. 10 ГК РФ + Ст. 10.bis</h3>
+                    <p class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-3">Злоупотребление правом</p>
+                    <p class="text-sm text-slate-600 mb-4">
+                        Парижская конвенция и ГК РФ. Запрет на действия, имеющие единственной целью причинение вреда другому лицу (вымогательство).
+                    </p>
+                    <a href="https://www.consultant.ru/document/cons_doc_LAW_5142/6c07223018e69e0618b14a938c3539097495039f/" target="_blank" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800">
+                        Читать статью <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section id="analytics" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8">Аналитика и Судебная практика</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Financial Chart -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <h3 class="font-bold text-lg mb-4 text-slate-800">Финансовая модель: Суд vs Выкуп</h3>
+                    <canvas id="financeChart" height="200"></canvas>
+                    <p class="mt-4 text-sm text-slate-500 text-center italic">
+                        *Модель учитывает средние расходы на юриста и ожидаемую компенсацию
+                    </p>
+                </div>
+
+                <!-- Case Table -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <h3 class="font-bold text-lg mb-4 text-slate-800">Подобные прецеденты (РФ)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full text-sm text-left">
+                            <thead class="bg-slate-50 text-xs uppercase font-semibold text-slate-500">
+                                <tr>
+                                    <th class="px-4 py-3">Дело / Истец</th>
+                                    <th class="px-4 py-3">Ответчик</th>
+                                    <th class="px-4 py-3 text-right">Результат</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">Alibaba Group vs Holmrook</td>
+                                    <td class="px-4 py-3 text-slate-500">Киберсквоттер</td>
+                                    <td class="px-4 py-3 text-right text-green-600 font-bold">Победа (ВС РФ)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">Pavel Volya vs Karayama</td>
+                                    <td class="px-4 py-3 text-slate-500">Офшор</td>
+                                    <td class="px-4 py-3 text-right text-green-600 font-bold">Победа + Домен</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">Sberbank vs Sberauto.ru</td>
+                                    <td class="px-4 py-3 text-slate-500">Физ. лицо</td>
+                                    <td class="px-4 py-3 text-right text-green-600 font-bold">Победа + 30к руб</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">ZIL vs ZIL.RU</td>
+                                    <td class="px-4 py-3 text-slate-500">Третьи лица</td>
+                                    <td class="px-4 py-3 text-right text-green-600 font-bold">Победа</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Section -->
+    <section id="plan" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">Пошаговый план действий</h2>
+            <p class="text-slate-600 mb-8">Структурированный алгоритм для юриста. Выполнять строго по порядку для сохранения доказательной базы.</p>
+
+            <div class="space-y-4">
+                <!-- Step 0 -->
+                <div class="flex gap-4 p-4 bg-yellow-50 rounded-xl border border-yellow-100">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="w-6 h-6 rounded-full bg-yellow-500 text-white flex items-center justify-center font-bold text-sm">!</div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-yellow-900">ШАГ 0: Немедленная фиксация (Сегодня)</h4>
+                        <p class="text-sm text-yellow-800 mt-1">До отправки любых писем необходимо произвести <strong>нотариальный осмотр сайта</strong>. Если ответчик сменит контент, доказательства будут утеряны. Обычные скриншоты судом не принимаются.</p>
+                    </div>
+                </div>
+
+                <!-- Step 1 -->
+                <div class="flex gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-primary-300 transition-colors">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center font-bold text-sm">1</div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Подача заявки на Товарный Знак</h4>
+                        <p class="text-sm text-slate-600 mt-1">Срочно подать заявку в Роспатент на "VETFLOW". Наличие заявки (приоритетная справка) усилит позицию в суде.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-primary-300 transition-colors">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center font-bold text-sm">2</div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Претензионная работа</h4>
+                        <p class="text-sm text-slate-600 mt-1">Отправка заказного письма (с описью) в ООО "РЕГРУ" и администратору домена (см. шаблон ниже). Дублирование на email.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-primary-300 transition-colors">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center font-bold text-sm">3</div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Подготовка иска и Обеспечительные меры</h4>
+                        <p class="text-sm text-slate-600 mt-1">Подготовка иска в АС Свердловской области. <strong>Критично:</strong> вместе с иском подать ходатайство об обеспечительных мерах (запрет регистратору на смену администратора), чтобы домен не "увели".</p>
+                    </div>
+                </div>
+                 <!-- Step 4 -->
+                 <div class="flex gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-primary-300 transition-colors">
+                    <div class="flex-shrink-0 mt-1">
+                        <div class="w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center font-bold text-sm">4</div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Жалоба в УФАС</h4>
+                        <p class="text-sm text-slate-600 mt-1">Параллельно подать жалобу в ФАС на недобросовестную конкуренцию. Это создаст дополнительное давление на ответчика.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Letter Section -->
+    <section id="letter" class="py-16 bg-primary-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Проект предсудебной претензии</h2>
+                    <p class="text-primary-200 text-sm">Готовый текст для отправки регистратору и администратору.</p>
+                </div>
+                <button onclick="copyToClipboard()" class="bg-white text-primary-900 hover:bg-primary-50 px-5 py-3 rounded-lg font-bold flex items-center gap-2 transition-all">
+                    <i data-lucide="copy" class="w-4 h-4"></i>
+                    Копировать текст
+                </button>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 font-serif relative">
+                <div id="copyAlert" class="absolute top-4 right-4 bg-green-500 text-white text-xs px-3 py-1 rounded opacity-0 transition-opacity">Скопировано!</div>
+                <pre id="letterText" class="whitespace-pre-wrap text-sm leading-relaxed font-sans text-primary-50">
+КОМУ: 
+1. АДМИНИСТРАТОРУ ДОМЕННОГО ИМЕНИ VETFLOW.RU
+(через регистратора ООО "РЕГРУ")
+2. ООО "РЕГРУ" (Регистратор доменных имен)
+Email: support@reg.ru
+
+ОТ: ООО "ВЕТФЛОУ"
+ОГРН: 1269600000779, ИНН: 6685231007
+Адрес: 620000, г. Екатеринбург, ул. Малышева, стр. 51, пом. 44/04
+
+ПРЕДСУДЕБНАЯ ПРЕТЕНЗИЯ
+(Уведомление о нарушении исключительного права на фирменное наименование и недобросовестной конкуренции)
+
+Уважаемые господа,
+
+16 января 2026 года в ЕГРЮЛ было зарегистрировано юридическое лицо ООО "ВЕТФЛОУ" (ОГРН 1269600000779). С этого момента Обществу принадлежит исключительное право использования своего фирменного наименования в соответствии со ст. 1474 ГК РФ.
+
+17 января 2026 года (спустя менее 24 часов) было зарегистрировано доменное имя VETFLOW.RU. Временной разрыв менее суток свидетельствует о мониторинге открытых реестров ЕГРЮЛ и недобросовестной регистрации домена с целью его дальнейшей перепродажи, что подтверждается выставлением домена на продажу по завышенной цене (100,000 руб.).
+
+Данные действия нарушают:
+1. Ст. 1474 ГК РФ (Исключительное право на фирменное наименование).
+2. Ст. 10 ГК РФ (Недопустимость злоупотребления правом).
+3. Ст. 14.6 ФЗ "О защите конкуренции" (Запрет на недобросовестную конкуренцию).
+
+ТРЕБУЕМ:
+1. В течение 10 дней безвозмездно передать права администрирования домена VETFLOW.RU в пользу ООО "ВЕТФЛОУ".
+2. Прекратить использование обозначения, сходного до степени смешения с фирменным наименованием Истца.
+
+В случае отказа мы будем вынуждены обратиться в Арбитражный суд Свердловской области с иском о взыскании компенсации в размере до 500 000 рублей, а также судебных издержек. Параллельно будет подана жалоба в УФАС.
+
+Генеральный директор
+Ветров И.А.
+___________________
+(Дата)
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <svg width="24" height="24" viewBox="0 0 40 40" fill="none" class="text-slate-600">
+                    <rect width="40" height="40" rx="12" fill="currentColor" fill-opacity="0.1"/>
+                    <path d="M12 14L18 28L28 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="28" cy="12" r="3" fill="currentColor"/>
+                </svg>
+                <span class="font-bold text-slate-200">VETFLOW.LEGAL</span>
+            </div>
+            <div class="text-sm">
+                Материалы подготовлены для внутреннего использования. <br>
+                Дата актуализации: 04.02.2026
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Chart.js Configuration
+        const ctx = document.getElementById('financeChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Вариант: ВЫКУП', 'Вариант: СУД (Пессимистичный)', 'Вариант: СУД (Реалистичный)'],
+                datasets: [{
+                    label: 'Финансовый результат (RUB)',
+                    data: [-100000, -50000, 150000],
+                    backgroundColor: [
+                        'rgba(239, 68, 68, 0.7)', // Red for Buy
+                        'rgba(234, 179, 8, 0.7)', // Yellow for Pessimistic
+                        'rgba(34, 197, 94, 0.7)'  // Green for Realistic
+                    ],
+                    borderColor: [
+                        'rgb(239, 68, 68)',
+                        'rgb(234, 179, 8)',
+                        'rgb(34, 197, 94)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(context.parsed.y);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Copy Function
+        function copyToClipboard() {
+            const letterText = document.getElementById('letterText').innerText;
+            
+            // Create a temporary textarea element
+            const tempInput = document.createElement("textarea");
+            tempInput.value = letterText;
+            document.body.appendChild(tempInput);
+            
+            // Select the text
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); /* For mobile devices */
+
+            // Copy the text inside the text field
+            document.execCommand("copy");
+
+            // Remove the temporary element
+            document.body.removeChild(tempInput);
+
+            // Show success alert
+            const alert = document.getElementById('copyAlert');
+            alert.classList.remove('opacity-0');
+            setTimeout(() => {
+                alert.classList.add('opacity-0');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
